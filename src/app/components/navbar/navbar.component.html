@@ -1,0 +1,80 @@
+<nav class="fixed top-0 w-full z-50 border-b transition-all duration-300" [class.glass-card]="themeService.isDark"
+  [class.border-white/10]="themeService.isDark" [class.bg-white/50]="!themeService.isDark"
+  [class.backdrop-blur-md]="!themeService.isDark" [class.border-orange-200]="!themeService.isDark">
+  <div class="w-full px-2">
+    <div class="flex justify-between items-center h-14">
+      <a routerLink="/" class="flex items-center space-x-2 cursor-pointer">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-0.5 glow-shadow"> <img
+            src="assets/Photo/FavconAB.png" alt="OB" class="w-full h-full rounded-full object-cover"> </div> <span
+          class="text-sm font-bold gradient-text">Ornab Biswass</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8"> <a routerLink="/"
+          class="transition-all duration-300 cursor-pointer relative group" [class.text-gray-300]="themeService.isDark"
+          [class.hover:text-white]="themeService.isDark" [class.text-gray-800]="!themeService.isDark"
+          [class.hover:text-gray-600]="!themeService.isDark"> Home <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <a
+          routerLink="/about" class="transition-all duration-300 cursor-pointer relative group"
+          [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+          [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> About <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <a
+          routerLink="/projects" class="transition-all duration-300 cursor-pointer relative group"
+          [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+          [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Projects
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <a
+          routerLink="/experience" class="transition-all duration-300 cursor-pointer relative group"
+          [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+          [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Experience
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <a
+          routerLink="/achievements" class="transition-all duration-300 cursor-pointer relative group"
+          [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+          [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Achievements
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <a
+          routerLink="/contact" class="transition-all duration-300 cursor-pointer relative group"
+          [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+          [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Contact <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-full transition-all duration-300"
+            [class.from-gray-600]="!themeService.isDark" [class.to-gray-800]="!themeService.isDark"></span> </a> <button
+          (click)="toggleTheme()"
+          [class]="themeService.isDark ? 'p-2 rounded-md text-white hover:bg-gray-700 transition-all' : 'p-2 rounded-md text-gray-800 hover:bg-gray-200 transition-all'">
+          <i [class]="themeService.isDark ? 'fas fa-sun' : 'fas fa-moon'"></i> </button> </div> <button
+        (click)="toggleMobileMenu()" class="md:hidden p-2" [class.text-gray-300]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark"> <i
+          [class]="mobileMenuOpen() ? 'fas fa-times text-xl' : 'fas fa-bars text-xl'"></i> </button>
+    </div>
+  </div> <!-- Mobile Menu -->
+  <div *ngIf="mobileMenuOpen()" class="md:hidden w-full" [class.glass-card]="themeService.isDark"
+    [class.bg-white/95]="!themeService.isDark" [class.backdrop-blur-md]="true">
+    <div class="px-4 py-4 space-y-4"> <a routerLink="/" (click)="toggleMobileMenu()"
+        class="block py-2 transition-all duration-300" [class.text-gray-300]="themeService.isDark"
+        [class.hover:text-white]="themeService.isDark" [class.text-gray-800]="!themeService.isDark"
+        [class.hover:text-gray-600]="!themeService.isDark"> Home </a> <a routerLink="/about"
+        (click)="toggleMobileMenu()" class="block py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> About </a> <a
+        routerLink="/projects" (click)="toggleMobileMenu()" class="block py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Projects </a>
+      <a routerLink="/experience" (click)="toggleMobileMenu()" class="block py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Experience </a>
+      <a routerLink="/achievements" (click)="toggleMobileMenu()" class="block py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Achievements
+      </a> <a routerLink="/contact" (click)="toggleMobileMenu()" class="block py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> Contact </a>
+      <button (click)="toggleTheme()" class="w-full text-left py-2 transition-all duration-300"
+        [class.text-gray-300]="themeService.isDark" [class.hover:text-white]="themeService.isDark"
+        [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-600]="!themeService.isDark"> <i
+          [class]="themeService.isDark ? 'fas fa-sun mr-2' : 'fas fa-moon mr-2'"></i> {{ themeService.isDark ? 'Light
+        Mode' : 'Dark Mode' }} </button> </div>
+  </div>
+</nav>

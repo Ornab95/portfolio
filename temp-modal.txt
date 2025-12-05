@@ -1,0 +1,9 @@
+  selectedImage: string | null = null;
+  
+  openImageModal(imageSrc: string) {
+    this.selectedImage = imageSrc;
+  }
+  
+  closeImageModal() {
+    this.selectedImage = null;
+  }

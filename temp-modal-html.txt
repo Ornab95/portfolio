@@ -1,0 +1,15 @@
+    
+    <!-- Image Modal -->
+    <div *ngIf="selectedImage" 
+         class="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50" 
+         (click)="closeImageModal()">
+      <div class="relative max-w-5xl max-h-[90vh] p-4">
+        <img [src]="selectedImage" 
+             class="max-w-full max-h-full object-contain rounded-lg" 
+             (click)="$event.stopPropagation()">
+        <button (click)="closeImageModal()" 
+                class="absolute top-2 right-2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors">
+          <i class="fas fa-times text-white text-xl"></i>
+        </button>
+      </div>
+    </div>

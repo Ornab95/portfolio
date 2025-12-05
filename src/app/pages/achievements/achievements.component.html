@@ -1,0 +1,53 @@
+<div class="min-h-screen transition-all duration-500" 
+     [class.bg-black]="themeService.isDark" 
+     [class.bg-gradient-to-br]="!themeService.isDark" 
+     [class.from-orange-50]="!themeService.isDark" 
+     [class.via-amber-50]="!themeService.isDark" 
+     [class.to-yellow-100]="!themeService.isDark">
+  <app-navbar></app-navbar>
+  <div class="pt-32 pb-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h1 class="text-6xl font-black gradient-text mb-6">Achievements</h1>
+        <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div *ngFor="let achievement of achievements" 
+             class="glass-card rounded-3xl p-8 hover-glow transition-all duration-500 border" 
+             [class.border-white/20]="themeService.isDark" 
+             [class.border-gray-300]="!themeService.isDark">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-shrink-0">
+              <img [src]="achievement.image" [alt]="achievement.title" loading="lazy" 
+                   class="w-full md:w-48 h-48 object-cover rounded-2xl border" 
+                   [class.border-white/20]="themeService.isDark" 
+                   [class.border-gray-300]="!themeService.isDark">
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold gradient-text mb-4">{{achievement.title}}</h3>
+              <p class="mb-4 leading-relaxed" 
+                 [class.text-gray-300]="themeService.isDark" 
+                 [class.text-gray-800]="!themeService.isDark">{{achievement.description}}</p>
+              <div class="flex items-center text-sm mb-4" 
+                   [class.text-gray-400]="themeService.isDark" 
+                   [class.text-gray-700]="!themeService.isDark">
+                <i class="fas fa-calendar-alt mr-2"></i>{{achievement.date}}
+              </div>
+              <a *ngIf="achievement.certificate" [href]="achievement.certificate" 
+                 class="inline-block glass-card px-6 py-2 rounded-full transition-colors border" 
+                 [class.text-blue-400]="themeService.isDark" 
+                 [class.hover:text-blue-300]="themeService.isDark" 
+                 [class.text-gray-700]="!themeService.isDark" 
+                 [class.hover:text-gray-600]="!themeService.isDark" 
+                 [class.border-white/20]="themeService.isDark" 
+                 [class.border-gray-300]="!themeService.isDark">
+                <i class="fas fa-certificate mr-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

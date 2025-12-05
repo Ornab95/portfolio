@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .dark { background: #0a0a0a; color: #ffffff; }
+  .light { background: #ffffff; color: #1f2937; }
+}
+
+@layer components {
+  .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  .glow-shadow { box-shadow: 0 0 50px rgba(59, 130, 246, 0.3), 0 0 100px rgba(59, 130, 246, 0.1); }
+  .hover-glow:hover { box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); transform: translateY(-5px); }
+  .gradient-text { background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .text-dark { color: #1f2937 !important; }
+  .text-light { color: #ffffff !important; }
+  .floating { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+}
+
+/* -- Prevent horizontal scroll and enforce sensible sizing -- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;    /* prevent horizontal scroll */
+  box-sizing: border-box; /* consistent box sizing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ensure every element uses border-box (avoids width surprises) */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* make images and video responsive */
+img, picture, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* optional: when mobile menu opens, we already lock scroll vertically in TS;
+   this prevents accidental horizontal scroll from inner elements too */
+body.mobile-menu-open {
+  overflow: hidden;
+}
