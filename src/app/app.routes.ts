@@ -24,6 +24,7 @@ export const routes: Routes = [
   { path: 'projects/exam-portal', loadComponent: () => import('./pages/project-details/exam-portal.component').then(m => m.ExamPortalComponent) },
   { path: 'projects/student-score-predictor', loadComponent: () => import('./pages/project-details/student-score-predictor.component').then(m => m.StudentScorePredictorComponent) },
   { path: 'projects/home-price-prediction', loadComponent: () => import('./pages/project-details/home-price-prediction.component').then(m => m.HomePricePredictionComponent) },
+  { path: 'projects/ats', loadComponent: () => import('./pages/project-details/ats.component').then(m => m.ATSComponent) },
   { path: 'achievements', loadComponent: () => import('./pages/achievements/achievements.component').then(m => m.AchievementsComponent) },
   { path: '**', redirectTo: '' }
 ];

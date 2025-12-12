@@ -1,0 +1,90 @@
+<div class="min-h-screen transition-all duration-500" 
+     [class.bg-black]="themeService.isDark" 
+     [class.bg-gradient-to-br]="!themeService.isDark" 
+     [class.from-orange-50]="!themeService.isDark" 
+     [class.via-amber-50]="!themeService.isDark" 
+     [class.to-yellow-100]="!themeService.isDark">
+  <app-navbar></app-navbar>
+  
+  <section class="pt-32 pb-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-black gradient-text mb-6">
+          Intelligent Resume Screening & Candidate Matching System (ATS)
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed" 
+           [class.text-gray-300]="themeService.isDark" 
+           [class.text-gray-700]="!themeService.isDark">
+          AI-powered Applicant Tracking System for intelligent resume screening and candidate matching
+        </p>
+        <div class="flex justify-center gap-4 mt-8">
+          <a href="https://github.com/Ornab95/Intelligent-Resume-Screening-Candidate-Matching-System-ATS.git" 
+             target="_blank"
+             class="glass-card px-6 py-3 rounded-full hover-glow transition-all duration-300 flex items-center gap-2 border"
+             [class.border-transparent]="themeService.isDark"
+             [class.border-black]="!themeService.isDark">
+            <i class="fab fa-github"></i>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Status Badge -->
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">
+          <i class="fas fa-code mr-2"></i>
+          Under Development
+        </span>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div *ngFor="let feature of features" 
+             class="glass-card p-6 rounded-2xl hover-glow transition-all duration-300 border" 
+             [class.border-white/20]="themeService.isDark" 
+             [class.border-gray-300]="!themeService.isDark">
+          <div class="text-3xl mb-4">
+            <i [class]="feature.icon + ' gradient-text'"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3" 
+              [class.text-white]="themeService.isDark" 
+              [class.text-gray-900]="!themeService.isDark">
+            {{feature.title}}
+          </h3>
+          <p [class.text-gray-400]="themeService.isDark" 
+             [class.text-gray-700]="!themeService.isDark">
+            {{feature.description}}
+          </p>
+        </div>
+      </div>
+
+      <!-- Technologies -->
+      <div class="glass-card p-8 rounded-2xl mb-16 border" 
+           [class.border-white/20]="themeService.isDark" 
+           [class.border-gray-300]="!themeService.isDark">
+        <h3 class="text-2xl font-bold gradient-text mb-6 text-center">Technologies Used</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div *ngFor="let tech of technologies" 
+               class="text-center p-4 glass-card rounded-xl hover-glow transition-all duration-300">
+            <i [class]="tech.icon + ' text-3xl mb-2'"></i>
+            <p class="font-medium" 
+               [class.text-gray-300]="themeService.isDark" 
+               [class.text-gray-800]="!themeService.isDark">
+              {{tech.name}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="text-center">
+        <a routerLink="/projects" 
+           class="glass-card px-8 py-3 rounded-full hover-glow transition-all duration-300 inline-flex items-center gap-2">
+          <i class="fas fa-arrow-left"></i>
+          Back to Projects
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

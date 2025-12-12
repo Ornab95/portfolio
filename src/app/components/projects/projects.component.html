@@ -14,7 +14,7 @@
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div *ngFor="let project of projects" 
-             class="glass-card rounded-3xl overflow-hidden hover-glow transition-all duration-500 group border border-gray-700/30">
+             class="glass-card rounded-3xl overflow-hidden hover-glow transition-all duration-500 group border border-gray-700/30 flex flex-col h-full">
           <div class="relative overflow-hidden">
             <img [src]="project.image" [alt]="project.title" 
                  loading="lazy"
@@ -26,13 +26,13 @@
             </div>
           </div>
           
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-1">
             <h3 class="text-xl font-bold mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300" 
                 [class.text-white]="themeService.isDark" 
                 [class.text-gray-900]="!themeService.isDark">
               {{project.title}}
             </h3>
-            <p class="text-sm mb-4 leading-relaxed" 
+            <p class="text-sm mb-4 leading-relaxed flex-1" 
                [class.text-gray-400]="themeService.isDark" 
                [class.text-gray-700]="!themeService.isDark">{{project.description}}</p>
             
@@ -47,7 +47,7 @@
               </span>
             </div>
             
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center mt-auto">
               <a [routerLink]="project.route" class="transition-colors font-medium" 
                  [class.text-blue-400]="themeService.isDark" 
                  [class.hover:text-blue-300]="themeService.isDark" 
