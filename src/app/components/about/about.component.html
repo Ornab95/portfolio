@@ -87,16 +87,17 @@
           <!-- Stats -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
 
-            <div class="glass-card p-6 rounded-2xl text-center hover-glow transition-all duration-300 border"
-                 [class.border-white/20]="themeService.isDark"
-                 [class.border-gray-300]="!themeService.isDark">
+            <a routerLink="/projects"
+               class="glass-card p-6 rounded-2xl text-center hover-glow transition-all duration-300 border cursor-pointer"
+               [class.border-white/20]="themeService.isDark"
+               [class.border-gray-300]="!themeService.isDark">
               <div class="text-4xl font-black gradient-text">10+</div>
               <div class="font-medium"
                    [class.text-gray-400]="themeService.isDark"
                    [class.text-gray-700]="!themeService.isDark">
                 Projects
               </div>
-            </div>
+            </a>
 
             <div class="glass-card p-6 rounded-2xl text-center hover-glow transition-all duration-300 border"
                  [class.border-white/20]="themeService.isDark"
