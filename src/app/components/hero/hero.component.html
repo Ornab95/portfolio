@@ -18,45 +18,58 @@
       <!-- Left Content -->
       <div class="space-y-8">
         <div class="space-y-4">
-          <div class="inline-flex items-center px-4 py-2 rounded-full" [class.bg-white/10]="themeService.isDark"
-            [class.bg-orange-100]="!themeService.isDark" [class.text-blue-400]="themeService.isDark"
-            [class.text-gray-700]="!themeService.isDark">
+          <div class="inline-flex items-center px-4 py-2 rounded-full"
+               [class.bg-white/10]="themeService.isDark"
+               [class.bg-orange-100]="!themeService.isDark"
+               [class.text-blue-400]="themeService.isDark"
+               [class.text-gray-700]="!themeService.isDark">
             <i class="fas fa-code mr-2"></i>
-            <span class="text-sm font-medium">AI Engineer</span>
+            <span class="text-sm font-medium">Artificial Intelligence Engineer</span>
           </div>
 
           <h1 class="text-4xl lg:text-5xl font-black leading-tight">
-            <span class="gradient-text">Hi, I'm</span><br>
+            <span class="gradient-text">Hello, I am</span><br>
             <span class="gradient-text">Ornab Biswass</span>
           </h1>
 
-          <p class="text-xl leading-relaxed max-w-lg" [class.text-gray-300]="themeService.isDark"
-            [class.text-gray-800]="!themeService.isDark">
-            AI-driven problem solver specializing in <span class="font-semibold text-gray-700">Machine Learning</span>,
-            <span class="font-semibold text-gray-700">Data Science</span>, and
-            <span class="font-semibold text-gray-700">Geospatial Analysis</span>,
-            with a strong foundation in building scalable
-            <span class="font-semibold text-amber-600">web applications</span> and data-powered solutions.
+          <p class="text-xl leading-relaxed max-w-lg"
+             [class.text-gray-300]="themeService.isDark"
+             [class.text-gray-800]="!themeService.isDark">
+            A <span class="font-semibold text-gray-700">Computer Science graduate</span> with strong academic and practical
+            interests in <span class="font-semibold text-gray-700">Artificial Intelligence</span>,
+            <span class="font-semibold text-gray-700">Machine Learning</span>, and
+            <span class="font-semibold text-gray-700">Data Science</span>.
+            Experienced in applying data-driven methodologies and computational techniques
+            to develop scalable, research-oriented, and real-world software systems.
           </p>
 
         </div>
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-6">
-          <div class="text-center">
-            <div class="text-3xl font-bold gradient-text">15+</div>
-            <div class="text-sm" [class.text-gray-400]="themeService.isDark"
-              [class.text-gray-700]="!themeService.isDark">Projects</div>
-          </div>
+          <a routerLink="/projects" class="text-center cursor-pointer hover:scale-105 transition-transform duration-300">
+            <div class="text-3xl font-bold gradient-text">10+</div>
+            <div class="text-sm"
+                 [class.text-gray-400]="themeService.isDark"
+                 [class.text-gray-700]="!themeService.isDark">
+              Academic & Practical Projects
+            </div>
+          </a>
           <div class="text-center">
             <div class="text-3xl font-bold gradient-text">2+</div>
-            <div class="text-sm" [class.text-gray-400]="themeService.isDark"
-              [class.text-gray-700]="!themeService.isDark">Years Exp</div>
+            <div class="text-sm"
+                 [class.text-gray-400]="themeService.isDark"
+                 [class.text-gray-700]="!themeService.isDark">
+              Years of Research & Development
+            </div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold gradient-text">5+</div>
-            <div class="text-sm" [class.text-gray-400]="themeService.isDark"
-              [class.text-gray-700]="!themeService.isDark">Technologies</div>
+            <div class="text-3xl font-bold gradient-text">6+</div>
+            <div class="text-sm"
+                 [class.text-gray-400]="themeService.isDark"
+                 [class.text-gray-700]="!themeService.isDark">
+              Machine Learning Studies
+            </div>
           </div>
         </div>
 
@@ -64,68 +77,87 @@
         <div class="flex flex-col sm:flex-row gap-4">
           <button routerLink="/projects"
             class="px-8 py-4 rounded-full font-semibold transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white transform hover:-translate-y-1"
-            [class.hover:shadow-2xl]="themeService.isDark" [class.hover:shadow-blue-500/25]="themeService.isDark"
-            [class.hover:shadow-xl]="!themeService.isDark" [class.hover:shadow-orange-500/50]="!themeService.isDark">
-            <i class="fas fa-rocket mr-2"></i>View My Work
+            [class.hover:shadow-2xl]="themeService.isDark"
+            [class.hover:shadow-blue-500/25]="themeService.isDark"
+            [class.hover:shadow-xl]="!themeService.isDark"
+            [class.hover:shadow-orange-500/50]="!themeService.isDark">
+            <i class="fas fa-rocket mr-2"></i>Academic & Technical Projects
           </button>
+
           <a href="assets/pdf/UniversalResume.pdf"
             class="px-8 py-4 rounded-full font-semibold transition-all duration-300 border-2 transform hover:-translate-y-1"
-            [class.border-white/20]="themeService.isDark" [class.text-white]="themeService.isDark"
-            [class.hover:bg-white/10]="themeService.isDark" [class.hover:shadow-xl]="themeService.isDark"
-            [class.hover:shadow-white/25]="themeService.isDark" [class.border-orange-300]="!themeService.isDark"
-            [class.text-gray-800]="!themeService.isDark" [class.hover:bg-orange-100]="!themeService.isDark"
-            [class.hover:border-orange-400]="!themeService.isDark" [class.hover:text-gray-700]="!themeService.isDark"
-            [class.hover:shadow-xl]="!themeService.isDark" [class.hover:shadow-orange-500/50]="!themeService.isDark">
-            <i class="fas fa-download mr-2"></i>Download CV
+            [class.border-white/20]="themeService.isDark"
+            [class.text-white]="themeService.isDark"
+            [class.hover:bg-white/10]="themeService.isDark"
+            [class.hover:shadow-xl]="themeService.isDark"
+            [class.hover:shadow-white/25]="themeService.isDark"
+            [class.border-orange-300]="!themeService.isDark"
+            [class.text-gray-800]="!themeService.isDark"
+            [class.hover:bg-orange-100]="!themeService.isDark"
+            [class.hover:border-orange-400]="!themeService.isDark"
+            [class.hover:text-gray-700]="!themeService.isDark"
+            [class.hover:shadow-xl]="!themeService.isDark"
+            [class.hover:shadow-orange-500/50]="!themeService.isDark">
+            <i class="fas fa-download mr-2"></i>Curriculum Vitae
           </a>
         </div>
 
         <!-- Social Links -->
         <div class="flex space-x-4">
-          <a href="https://github.com/Ornab95"
-            class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-            [class.bg-white/10]="themeService.isDark" [class.hover:bg-white/20]="themeService.isDark"
-            [class.hover:shadow-lg]="themeService.isDark" [class.hover:shadow-blue-500/25]="themeService.isDark"
-            [class.bg-orange-100]="!themeService.isDark" [class.hover:bg-orange-200]="!themeService.isDark"
-            [class.hover:shadow-xl]="!themeService.isDark" [class.hover:shadow-orange-500/25]="!themeService.isDark">
-            <i class="fab fa-github text-xl" [class.text-white]="themeService.isDark"
-              [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-700]="!themeService.isDark"></i>
+          <a href="https://github.com/Ornab95" class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+             [class.bg-white/10]="themeService.isDark"
+             [class.hover:bg-white/20]="themeService.isDark"
+             [class.bg-orange-100]="!themeService.isDark"
+             [class.hover:bg-orange-200]="!themeService.isDark">
+            <i class="fab fa-github text-xl"
+               [class.text-white]="themeService.isDark"
+               [class.text-gray-800]="!themeService.isDark"></i>
           </a>
-          <a href="https://www.linkedin.com/in/ornab-biswass/"
-            class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-            [class.bg-white/10]="themeService.isDark" [class.hover:bg-white/20]="themeService.isDark"
-            [class.hover:shadow-lg]="themeService.isDark" [class.hover:shadow-blue-500/25]="themeService.isDark"
-            [class.bg-orange-100]="!themeService.isDark" [class.hover:bg-orange-200]="!themeService.isDark"
-            [class.hover:shadow-xl]="!themeService.isDark" [class.hover:shadow-orange-500/25]="!themeService.isDark">
-            <i class="fab fa-linkedin text-xl" [class.text-white]="themeService.isDark"
-              [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-700]="!themeService.isDark"></i>
+
+          <a href="https://www.linkedin.com/in/ornab-biswass/" class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+             [class.bg-white/10]="themeService.isDark"
+             [class.hover:bg-white/20]="themeService.isDark"
+             [class.bg-orange-100]="!themeService.isDark"
+             [class.hover:bg-orange-200]="!themeService.isDark">
+            <i class="fab fa-linkedin text-xl"
+               [class.text-white]="themeService.isDark"
+               [class.text-gray-800]="!themeService.isDark"></i>
           </a>
-          <a href="mailto:ornabbiswass@gmail.com"
-            class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-            [class.bg-white/10]="themeService.isDark" [class.hover:bg-white/20]="themeService.isDark"
-            [class.hover:shadow-lg]="themeService.isDark" [class.hover:shadow-blue-500/25]="themeService.isDark"
-            [class.bg-orange-100]="!themeService.isDark" [class.hover:bg-orange-200]="!themeService.isDark"
-            [class.hover:shadow-xl]="!themeService.isDark" [class.hover:shadow-orange-500/25]="!themeService.isDark">
-            <i class="fas fa-envelope text-xl" [class.text-white]="themeService.isDark"
-              [class.text-gray-800]="!themeService.isDark" [class.hover:text-gray-700]="!themeService.isDark"></i>
+
+          <a href="mailto:ornabbiswass@gmail.com" class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+             [class.bg-white/10]="themeService.isDark"
+             [class.hover:bg-white/20]="themeService.isDark"
+             [class.bg-orange-100]="!themeService.isDark"
+             [class.hover:bg-orange-200]="!themeService.isDark">
+            <i class="fas fa-envelope text-xl"
+               [class.text-white]="themeService.isDark"
+               [class.text-gray-800]="!themeService.isDark"></i>
           </a>
         </div>
       </div>
 
-      <!-- Right Content - Profile Image -->
+      <!-- Right Content -->
       <div class="flex justify-center lg:justify-end">
         <div class="relative">
           <div
             class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30 animate-pulse">
           </div>
-          <div class="relative w-80 h-96 rounded-3xl overflow-hidden" [class.bg-white/10]="themeService.isDark"
-            [class.bg-orange-100/70]="!themeService.isDark" [class.backdrop-blur-sm]="true">
-            <img src="assets/Photo/OrnabBiswas.jpg" alt="Ornab Biswass" loading="lazy"
-              class="w-full h-full object-cover">
+          <div class="relative w-80 h-96 rounded-3xl overflow-hidden"
+               [class.bg-white/10]="themeService.isDark"
+               [class.bg-orange-100/70]="!themeService.isDark"
+               [class.backdrop-blur-sm]="true">
+            <img src="assets/Photo/OrnabBiswas.jpg"
+                 alt="Ornab Biswass – Artificial Intelligence and Machine Learning Engineer"
+                 loading="lazy"
+                 class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <div class="text-white font-semibold text-lg">Machine Learning Engineer</div>
-              <div class="text-gray-300 text-sm">Dhaka, Bangladesh</div>
+              <div class="text-white font-semibold text-lg">
+                Artificial Intelligence & Machine Learning
+              </div>
+              <div class="text-gray-300 text-sm">
+                Dhaka, Bangladesh
+              </div>
             </div>
           </div>
         </div>

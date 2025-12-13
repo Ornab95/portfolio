@@ -45,7 +45,7 @@ export class ProjectsPageComponent {
     {
       title: 'Talent Acquisition System',
       description: 'AI-powered recruitment platform with intelligent candidate matching.',
-      image: 'assets/TAS-Photo/TAS-Dashboard.png',
+      image: 'public/assets/TAS-Photo/Applicant Jobs Details.png',
       technologies: ['Angular', 'Spring Boot', 'MongoDB', 'AI/ML'],
       route: '/projects/talent-acquisition',
       github: 'https://github.com/Ornab95'

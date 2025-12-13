@@ -12,6 +12,20 @@ import { ThemeService } from '../../services/theme.service';
 export class ExperienceComponent {
   constructor(public themeService: ThemeService) {}
   protected readonly experiences = [
+      {
+    position: 'Research Assistant',
+    company: 'Southeast University',
+    duration: '2023 – 2024',
+    logo: 'assets/Photo/SEU.jpeg',
+    description:
+      'Worked as a Research Assistant supporting academic research activities in machine learning and data analysis. Contributed to dataset preparation, model experimentation, literature review, and documentation under faculty supervision.',
+    achievements: [
+      'Prepared and cleaned research datasets for machine learning experiments',
+      'Implemented and evaluated ML models using Python and Scikit-learn',
+      'Conducted literature reviews and summarized findings for research papers',
+      'Assisted in preparing academic reports, presentations, and documentation'
+    ]
+  },
     {
       position: 'IT Intern',
       company: 'Southeast University',

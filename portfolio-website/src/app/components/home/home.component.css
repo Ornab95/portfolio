@@ -1,5 +1,0 @@
-.image-shadow {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow effect */
-  border-radius: 8px; /* Optional: Rounds the corners of the image */
-  overflow: hidden; /* Ensures shadow does not affect the bounding box */
-}

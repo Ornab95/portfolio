@@ -13,6 +13,13 @@ export class AchievementsComponent {
   constructor(public themeService: ThemeService) {}
   protected readonly achievements = [
     {
+    title: 'Research Conference Presentation',
+    description: 'Presented a research paper on machine learning-based breast cancer classification at an IEEE-affiliated academic conference. Contributed to experimental design, model evaluation, and interpretation of results, and engaged in scholarly discussion with researchers and faculty members.',
+    image: 'assets/Photo/conferance.png',
+    date: '2024',
+    certificate: 'assets/pdf/ConferanceCertificate.pdf'
+  },
+    {
       title: 'Research Defence',
       description: 'Successfully defended research on breast cancer malignancy prediction using machine learning classifiers including Logistic Regression, Decision Trees, Random Forest, K-Nearest Neighbors, and Naive Bayes on the Wisconsin Diagnostic Breast Cancer Dataset.',
       image: 'assets/Photo/OrnabBiswas1.jpg',
